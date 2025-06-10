@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real-time Chat (Dark Mode)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-container" class="centered">
+    <h2>Enter your username</h2>
+    <input type="text" id="username-input" placeholder="Username" />
+    <button id="join-btn">Join Chat</button>
+  </div>
+
+  <div id="chat-container" class="hidden">
+    <div class="sidebar">
+      <h3>Online Users</h3>
+      <ul id="users"></ul>
+    </div>
+    <div class="chat-main">
+      <div id="messages"></div>
+      <div id="typing"></div>
+      <form id="message-form">
+        <input autocomplete="off" id="message-input" placeholder="Type a message..." disabled />
+        <button disabled>Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
