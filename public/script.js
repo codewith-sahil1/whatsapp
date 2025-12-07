@@ -27,6 +27,8 @@ function disableChat() {
 }
 
 disableChat();
+// code
+
 
 joinBtn.addEventListener('click', () => {
   const name = usernameInput.value.trim();
